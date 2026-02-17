@@ -54,20 +54,40 @@
  */
 export function getFamilyNames(registry) {
   // Your code here
+  if(!registry || typeof registry!=="object" || Array.isArray(registry)) return [];
+  const familyNames = Object.keys(registry);
+  return familyNames;
 }
 
 export function getAllFamilies(registry) {
   // Your code here
+  if(!registry || typeof registry!=="object" || Array.isArray(registry)) return [];
+  const allFamilies = Object.values(registry);
+  return allFamilies;
 }
 
 export function getRationCardEntries(registry) {
   // Your code here
+  if(!registry || typeof registry!=="object" || Array.isArray(registry)) return [];
+  const entries = Object.entries(registry);
+  return entries;
+
 }
 
 export function hasRationCard(registry, cardId) {
   // Your code here
+  if( !registry || typeof registry!=="object" || typeof cardId!=="string") return false;
+  const result = registry.hasOwnProperty(cardId);
+  return result;
 }
 
 export function removeRationCard(registry, cardId) {
   // Your code here
+  if( !registry || typeof cardId!=="string" || typeof registry!=="object") return false;
+  let hasCard =false;
+  let isDeleted = false;
+  hasCard = registry.hasOwnProperty(cardId);
+  isDeleted = delete registry[cardId];
+  if(hasCard && isDeleted) return true;
+  else return false;
 }

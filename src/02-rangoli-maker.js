@@ -77,5 +77,5 @@ export function makeRangoliBorder(char, length) {
   // Your code here
   if(typeof char!=="string"||length<0) return "";
   let repeated = char.repeat(length);
-  return repeated.slice(0,length);
+  return repeated.slice(0,length)
 }
