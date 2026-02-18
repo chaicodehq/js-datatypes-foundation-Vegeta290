@@ -53,6 +53,9 @@
  */
 export function writePostcard(sender, receiver, message) {
   // Your code here
+  if(typeof sender!=="string" || typeof receiver!=="string" || typeof message!=="string" || sender.trim()===""||receiver.trim()===""||message.trim()==="") return "";
+  let messageSent = `Priy {receiver},\n\n{message}\n\nAapka/Aapki,\n{sender}`
+  return messageSent;
 }
 
 export function isValidPincode(code) {
