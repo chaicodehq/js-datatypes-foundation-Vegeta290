@@ -54,6 +54,15 @@
  */
 export function createThaliDescription(thali) {
   // Your code here
+  if(!thali || typeof thali1=="object") return "";
+  let upperName = thali.name.toUpperCase();
+  let price = Number(thali.price.toFixed(2));
+  let Category = thali.isVeg ? "Veg" : "Non-Veg";
+  return `${upperName} (${Category}) - Items:`
+  /*
+  - Example: createThaliDescription({name:"Rajasthani Thali", items:["dal","churma"], price:250, isVeg:true})
+ *                 => "RAJASTHANI THALI (Veg) - Items: dal, churma - Rs.250.00"
+  */ 
 }
 
 export function getThaliStats(thalis) {
