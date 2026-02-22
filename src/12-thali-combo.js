@@ -59,7 +59,8 @@ export function createThaliDescription(thali) {
   if(typeof name!=="string"||name.trim()===""||!Array.isArray(items)||items.length===0||typeof price!=="number"||typeof isVeg!=="boolean") return "";
   
   let upperName = name.toUpperCase();
-  //let price = thali.price.toFixed(2);ategory = isVeg ? "Veg" : "Non-Veg";
+  //let price = thali.price.toFixed(2);
+  Category = isVeg ? "Veg" : "Non-Veg";
   return `${upperName} (${Category}) - Items: ${thali.items.join(', ')} - Rs.${price.toFixed(2)}`;
   
 }
