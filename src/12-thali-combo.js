@@ -60,7 +60,7 @@ export function createThaliDescription(thali) {
   
   let upperName = name.toUpperCase();
   //let price = thali.price.toFixed(2);
-  Category = isVeg ? "Veg" : "Non-Veg";
+  let Category = isVeg ? "Veg" : "Non-Veg";
   return `${upperName} (${Category}) - Items: ${thali.items.join(', ')} - Rs.${price.toFixed(2)}`;
   
 }
